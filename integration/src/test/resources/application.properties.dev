@@ -1,0 +1,29 @@
+server.port=8081
+active.environment=dev
+
+itest.userPasswordHash=$2a$10$/CDJ7V91ydZtBXEtsi9B9.uVeZZ9JlizqKePAzY2hQDJTWisMyLSm
+itest.userEmail=digitoll-test@hyperaspect.com
+
+web.site.partner.id=5d288d64a192f0dfe1f8a99a
+web.site.pos.id=5d288db8a192f0dfe1f8a99b
+web.site.user.id=5d3f11258b9a8e7a66628771
+
+api.login.url=https://dev.digitoll.bg/user/login
+api.auth.url=https://dev.digitoll.bg/user/authenticate
+api.purchase.url=https://dev.digitoll.bg/purchasePayment/test
+api.register.url=https://dev.digitoll.bg/user/register
+api.get.sale.url=https://dev.digitoll.bg/sale
+
+itest.user.password=1234
+itest.user.names=Test Names
+itest.order.email=test@mail.digitoll
+itest.user.role.id=5cbd15419f8e4b0001c59b01
+itest.user.role.code=userRoleId
+itest.user.role.name=Users
+itest.wrong.user.name=wrong username
+itest.wrong.user.password=wrong password
+itest.auth.fail.mesasge=Bad credentials
+
+
+itest.kapsch.invalid.weekend.status=202
+itest.kapsch.invalid.weekend.message=Invalid Requested Date for Weekend Vignettes

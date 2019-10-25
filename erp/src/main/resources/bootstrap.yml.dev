@@ -1,0 +1,7 @@
+aws:
+  secretsmanager:
+    prefix: /secret
+    defaultContext: digitoll-services-erp-dev
+    name: digitoll-services-erp-dev
+    failFast: true
+    enabled: true

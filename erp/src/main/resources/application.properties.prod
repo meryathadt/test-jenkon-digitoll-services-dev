@@ -1,0 +1,33 @@
+server.port=8081
+active.environment=prod
+
+cbo.api.endpoint.c2=http://213.227.179.133:13001/api
+cbo.api.endpoint.c9=http://213.227.179.133:13002/api
+cbo.api.version.c2=v1
+cbo.api.version.c9=v1
+
+spring.data.mongodb.uri=mongodb://mongod.dev.digitoll.bg/erp
+
+digitoll.rest.mailer.host=smtp.gmail.com
+digitoll.rest.mailer.port=587
+digitoll.rest.mailer.subject=Your Evignette from DigiToll
+digitoll.rest.mailer.sender=no-reply@digitoll.bg
+digitoll.mailer.reports.subject.prefix=Digitoll report
+
+digitoll.partners.cash.terminal.id=5d404dce8b9a8e4011d2f03e
+digitoll.partner.emails=p.dimov@hyperaspect.com,chendova@cashterminal.eu,bogoeva@cashterminal.eu,stoynev@cashterminal.eu,tkachenko@cashterminal.eu
+digitoll.partner.emails.bcc=pavel@hyperaspect.com
+
+digitoll.office.emails=p.dimov@hyperaspect.com,pepsa@mail.bg,office@tss.bg
+
+web.site.partner.id=5d288d64a192f0dfe1f8a99a
+web.site.pos.id=5d288db8a192f0dfe1f8a99b
+web.site.user.id=5d3f11258b9a8e7a66628771
+
+cloud.aws.region.static=eu-central-1
+cloud.aws.stack.auto=false
+
+security.jwt.issuer=erp-api
+security.jwt.audience=erp-app
+
+sale.id.mask=000000000
