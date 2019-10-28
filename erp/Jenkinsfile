@@ -60,7 +60,7 @@ node {
 //for tests Jenkins
 
     stage('Test GH & Jenkins connectivity'){
-        sh 'just tests GitHub and Jenkins connectivity'
+        sh 'Just make tests of GitHub and Jenkins connectivity'
     }
 
     stage('Docker clean') {
