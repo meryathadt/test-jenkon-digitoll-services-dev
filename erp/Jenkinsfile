@@ -56,6 +56,7 @@ node {
 //         sh "docker push $ecr:$ENV"
 //     }
 //should be uncommented later
+//for tests Jenkins
 
     stage('Test'){
         sh 'just tests'
@@ -70,6 +71,7 @@ node {
 //         sh 'aws ecs update-service --force-new-deployment --cluster $ENV --service digitoll-services-erp-$ENV'
 //     }
 //should be uncommented later
+//for tests Jenkins
 
 //     if($ENV == 'dev') {
 //         stage('Build version check') {
