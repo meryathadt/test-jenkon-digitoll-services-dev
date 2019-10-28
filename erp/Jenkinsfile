@@ -50,12 +50,12 @@ node {
     }
 
 //for tests Jenkins
-//should be uncommented later
 //     stage('Push to ECR') {
 //         sh '$(aws ecr get-login --no-include-email)'
 //         sh "docker push $ecr:${version}.$BUILD_NUMBER"
 //         sh "docker push $ecr:$ENV"
 //     }
+//should be uncommented later
 
     stage('Test'){
         sh 'just tests'
@@ -66,10 +66,10 @@ node {
     }
 
 //for tests Jenkins
-//should be uncommented later
 //     stage('Deploy to ECS') {
 //         sh 'aws ecs update-service --force-new-deployment --cluster $ENV --service digitoll-services-erp-$ENV'
 //     }
+//should be uncommented later
 
 //     if($ENV == 'dev') {
 //         stage('Build version check') {
