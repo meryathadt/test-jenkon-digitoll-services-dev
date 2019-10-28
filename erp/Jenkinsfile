@@ -59,8 +59,8 @@ node {
 //should be uncommented later
 //for tests Jenkins
 
-    stage('Test'){
-        sh 'just tests'
+    stage('Test GH & Jenkins connectivity'){
+        sh 'just tests GH and Jenkins'
     }
 
     stage('Docker clean') {
