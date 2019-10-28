@@ -68,10 +68,11 @@ node {
     }
 
 //for tests Jenkins
+//should be uncommented later: begin
 //     stage('Deploy to ECS') {
 //         sh 'aws ecs update-service --force-new-deployment --cluster $ENV --service digitoll-services-erp-$ENV'
 //     }
-//should be uncommented later
+//should be uncommented later: end
 //for tests Jenkins
 
 //     if($ENV == 'dev') {
