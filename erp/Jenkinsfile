@@ -50,6 +50,7 @@ node {
     }
 
 //for tests Jenkins
+//should be uncommented later
 //     stage('Push to ECR') {
 //         sh '$(aws ecr get-login --no-include-email)'
 //         sh "docker push $ecr:${version}.$BUILD_NUMBER"
