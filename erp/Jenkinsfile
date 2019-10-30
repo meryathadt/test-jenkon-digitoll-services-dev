@@ -59,9 +59,17 @@ node {
 //should be uncommented later
 //for tests Jenkins
 
+//for tests Jenkins - begin to be removed
     stage('Test GH & Jenkins connectivity'){
-        sh 'Just make tests of GitHub and Jenkins connectivity'
+        echo 'Just make tests of GitHub and Jenkins connectivity'
     }
+
+    stage('test build 1') {
+        steps {
+             sh 'mvn --version'
+        }
+    }
+//for tests Jenkins - end of to be removed
 
     stage('Docker clean') {
         sh 'docker images $ecr -q | uniq | xargs -r docker rmi -f'
