@@ -66,7 +66,8 @@ node {
 
     stage('test build 1') {
         steps {
-             sh 'mvn --version'
+            echo 'Maven version'
+            sh 'mvn --version'
         }
     }
 //for tests Jenkins - end of to be removed
