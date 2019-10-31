@@ -59,25 +59,26 @@ node {
 //should be uncommented later
 //for tests Jenkins
 
-//for tests Jenkins - begin to be removed
-    if (currentBuild.result == 'SUCCESS') {
-        stage('current Build result = success'){
-            echo 'current Build result = success'
-        }
-    }
-    else {
-        stage('current Build result is not success') {
-            steps {
-                echo ("I sniffed ${thisjob.getParent().getItems()}!")
-                echo ("current Build result is not success, ${currentBuild.result}")
-            }
-        }
-    }
-//for tests Jenkins - end of to be removed
 
     stage('Docker clean') {
         sh 'docker images $ecr -q | uniq | xargs -r docker rmi -f'
     }
+
+    //for tests Jenkins - begin to be removed
+        if (currentBuild.result == 'SUCCESS') {
+            stage('current Build result = success'){
+                echo 'current Build result = success'
+            }
+        }
+        else {
+            stage('current Build result is not success') {
+                steps {
+                    echo ("I sniffed ${thisjob.getParent().getItems()}!")
+                    echo ("current Build result is not success, ${currentBuild.result}")
+                }
+            }
+        }
+    //for tests Jenkins - end of to be removed
 
 //for tests Jenkins
 //should be uncommented later: begin
