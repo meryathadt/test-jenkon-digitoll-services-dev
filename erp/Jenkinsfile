@@ -43,6 +43,24 @@ node {
         sh """echo "info.git.commit=$gitLatestCommit" >> $applicationProperties"""
 
         sh "mvn clean package -Dmaven.test.skip=true"
+
+
+            //for tests Jenkins - begin to be removed
+                if (currentBuild.result == 'SUCCESS') {
+                    //stage('in stage Build : current Build result = success'){
+                        echo ('in stage Build : current Build result = success, build number = $BUILD_NUMBER')
+                    //}
+                }
+                else {
+                    //stage('in stage Build : current Build result is not success') {
+                      //  steps {
+                            echo ("I sniffed ${thisjob.getParent().getItems()}!")
+                            echo ("in stage Build : current Build result is not success, build number = $BUILD_NUMBER, ${currentBuild.result}")
+                        //}
+                    //}
+                }
+            //for tests Jenkins - end of to be removed
+            
     }
 
     stage('Build image') {
