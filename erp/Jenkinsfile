@@ -67,14 +67,14 @@ node {
     //for tests Jenkins - begin to be removed
         if (currentBuild.result == 'SUCCESS') {
             stage('current Build result = success'){
-                echo 'current Build result = success'
+                echo ('current Build result = success, build number = $BUILD_NUMBER')
             }
         }
         else {
             stage('current Build result is not success') {
                 steps {
                     echo ("I sniffed ${thisjob.getParent().getItems()}!")
-                    echo ("current Build result is not success, ${currentBuild.result}")
+                    echo ("current Build result is not success, build number = $BUILD_NUMBER, ${currentBuild.result}")
                 }
             }
         }
