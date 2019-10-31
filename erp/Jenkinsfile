@@ -60,15 +60,17 @@ node {
 //for tests Jenkins
 
 //for tests Jenkins - begin to be removed
-    stage('Test GH & Jenkins connectivity'){
-        echo 'Just make tests of GitHub and Jenkins connectivity'
+    if (currentBuild.result == 'SUCCESS') {
+        stage('current Build result = success'){
+            echo 'current Build result = success'
+        }
     }
-
-    stage('test build 1') {
-        steps {
-            echo ("I sniffed ${thisjob.getParent().getItems()}!")
-            echo 'Maven version is:'
-            sh 'mvn --version'
+    else {
+        stage('current Build result is not success') {
+            steps {
+                echo ("I sniffed ${thisjob.getParent().getItems()}!")
+                echo ("current Build result is not success, ${currentBuild.result}")
+            }
         }
     }
 //for tests Jenkins - end of to be removed
